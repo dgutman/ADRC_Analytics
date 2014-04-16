@@ -5,11 +5,18 @@ import re,sys
 from Bio import Entrez
 from Bio.Entrez import efetch, read
 
+# I am interested in getting the following attributes:
+# AUTHOR LIST
+# AUTHOR LOCATION
+# Author University
+
 Entrez.email = "dagutman@gmail.com"     # Always tell NCBI who you are
 
 adrc_file_list = 'adrc_pubs.txt'
-adrc_fp = open('input_data/emory_adrc_pubs.txt','r')
+adrc_fp = open('input_data/emory_adrc_pubs_v1.txt','r')
 adrc_raw_paper_list = adrc_fp.readlines()
+
+fp_out = open('input_data/need_pmid.txt','w')
 
 global_author_list = {}   ### I am using this list of authors to then build a connectivity matrix--- but first I need to see who's represented
 
@@ -59,14 +66,10 @@ for pub in pub_list:
             
     else:
         print "Did not find PMID or PMCID",pub
-        not_matched += 1
+	fp_out.write(pub+'\n')        
+	not_matched += 1
         
 print not_matched,"entries did not have a PMC or PMID"
-
-# I am interested in getting the following attributes:
-# AUTHOR LIST
-# AUTHOR LOCATION
-# Author University
 
 def format_ddate(ddate):
     """Turn a date dictionary into an ISO-type string (YYYY-MM-DD)."""
@@ -78,13 +81,6 @@ def format_ddate(ddate):
         if not month:
             return None
     return "%s-%s-%s" % (year, month.zfill(2), day.zfill(2))
-
-
-
-for pmid in PMID_LIST:
-    print pmid
-    get_metadata_from_PMID(pmid)
-
 
 def get_metadata_from_PMID( pmid ):
     """This function will take an input PMID and parse the attributes I am interested in for the cytoscape plugin...."""
@@ -151,15 +147,11 @@ def get_metadata_from_PMID( pmid ):
 #    print ArticleInfo[k]
     
 
-
-# In[66]:
-
-print my_doc[0].keys()
 ## each returned element consists of two dictionaries-- pubmeddata and medlinecitatin..
-for k in my_doc[0].keys():
-    elmt = my_doc[0][k]
-    for k1 in elmt.keys():
-        print k1
+#for k in my_doc[0].keys():
+#    elmt = my_doc[0][k]
+#    for k1 in elmt.keys():
+#        print k1
         #,elmt[k1]
 
 
@@ -184,8 +176,12 @@ for k in my_doc[0].keys():
 #     History
 # 
 
-broken_pmid = '22926189'
-handle = efetch(db='pubmed', id=broken_pmid, retmode='xml')
-xml_data = read(handle)[0]
+#broken_pmid = '22926189'
+#handle = efetch(db='pubmed', id=broken_pmid, retmode='xml')
+#xml_data = read(handle)[0]
 
+
+for pmid in PMID_LIST:
+    print pmid
+    get_metadata_from_PMID(pmid)
 

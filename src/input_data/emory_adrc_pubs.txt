@@ -75,16 +75,11 @@ Jucker M, Walker LC.  Pathogenic protein seeding in Alzheimer disease and other 
 
 Jun G, Naj AC, Beecham GW, Wang LS, Buros J, Gallins PJ, Buxbaum JD, Ertekin-Taner N, Fallin MD, Friedland R, Inzelberg R, Kramer P, Rogaeva E, St George-Hyslop P; Alzheimer's Disease Genetics Consortium, Cantwell LB, Dombroski BA, Saykin AJ, Reiman EM, Bennett DA, Morris JC, Lunetta KL, Martin ER, Montine T J, Goate AM, Blacker D, Tsuang DW, Beekly D, Cupples LA, Hakonarson H,  Kukull W, Foroud TM, Haines J, Mayeux R, Farrer LA, Pericak-Vance MA, Schellenberg GD.  Meta-analysis confirms CR1, CLU, and PICALM as alzheimer disease risk loci and reveals interactions with APOE genotypes.  Arch Neural. 2010 Dec; 67(12):1473-84. Epub 2010 Aug 9.  NIHMS:  5232067
 
-Jutras MJ, Buffalo EA.  Synchronous neural activity and memorv formation.
-Curr Opin Neurobiol. 2010 Apr; 20(2):150-5. Epub 2010 Mar 18. Review. 
- PMC:  2862842
+Jutras MJ, Buffalo EA.  Synchronous neural activity and memorv formation. Curr Opin Neurobiol. 2010 Apr; 20(2):150-5. Epub 2010 Mar 18. Review.   PMC:  2862842
 
-Jutras MJ, Buffalo EA.  Recognition memorv signals in the macaque hippocampus.
-Proc Natl Acad Sci USA. 2010 Jan 5; 107(1):401-6. Epub 2009 Dec 14.
-PMC:  2806723
+Jutras MJ, Buffalo EA.  Recognition memorv signals in the macaque hippocampus. Proc Natl Acad Sci USA. 2010 Jan 5; 107(1):401-6. Epub 2009 Dec 14. PMC:  2806723
 
-Jutras MJ, Fries P, Buffalo EA.  Gamma-band synchronization in the macaque hippocampus and memorv formation.  J Neurosci. 2009 Oct 7; 29(40):12521-31.
-PMC:  2785486
+Jutras MJ, Fries P, Buffalo EA.  Gamma-band synchronization in the macaque hippocampus and memorv formation.  J Neurosci. 2009 Oct 7; 29(40):12521-31. PMC:  2785486
 Jutras MJ, Fries P, Buffalo EA. Oscillatory activity in the monkey hippocampus during visual exploration and memory formation. Proc Natl Acad Sci U S A. 2013 Aug 6;110(32):13144-9. doi: 10.1073/pnas.1302351110. Epub 2013 Jul 22.  PMID:  23878251  PMCID:  3740906
 Kim, H., Cho, Y.S., Do, E.Y-L. (2011) “Using Pen-Based Computing in Technology for Health”. Human-Computer Interaction. Users and Applications. Lecture Notes in Computer Science. J. Jacko, ed., pp. 192-201: Springer Berlin / Heidelberg
 
@@ -201,7 +196,7 @@ Childers, WS; Ni, R. Mehta, AK; Lynn, DG 2009 Peptide Membranes in Chemical Evol
 
 Chesi A, Staahl BT, Jovicic A, Couthouis J, Fasolino M, Raphael AR, Yamazaki T, Elias L, Polak M, Kelly C, Williams KL, Fifita JA, Maragakis NJ, Nicholson GA, King OD, Reed R, Crabtree GR, Blair IP, Glass JD, Gitler AD.  Exome sequencing to identify de novo mutations in sporadic ALS trios.  Nat Neurosci 2013;16:851-855.  PMCID: PMC3709464
 
-Childers, WS; Lu, K. Mehta, AK; Lynn, DG 2009, Templating Molecular Arrays in Amyloid’s Cross- Groves, J. Am. Chem. Soc. 131: 10165-72.
+Childers, WS; Lu, K. Mehta, AK; Lynn, DG 2009, Templating Molecular Arrays in Amyloid’s Cross- Groves, J. Am. Chem. Soc. 131: 10165-72. PMID: 19569651
 
 Childers, WS; Mehta, AK; Ni, R; Taylor, JV; Lynn, DG. 2010. Peptides Organized as Bilayer Membranes, Angewandte Chimie Intl Ed. http://dx.doi.org/10.1002/anie.201000212 and in Angew. Chimie http://dx.doi.org/10.1002/ange.201000212
 
@@ -287,21 +282,8 @@ Walker LC, Jucker M.  Seeds of dementia.  Sci Amer 2013;308;52-57.  PMID 2362722
 
 Wang L, Goldstein FC, Veledar E, Levey AI, Lah JJ, Meltzer CC, Holder CA, Mao H. Alterations in cortical thickness and white matter integrity in mild cognitive impairment measured by whole-brain cortical thickness mapping and diffusion tensor imaging. Am J Neuroradiol 30:893-9 (2009) PMID: 19279272; PMC2901819
 
-
 Xiaoyu Li, Andres F. Hernandez, Martha A. Grover, Nicholas V. Hud, and David G. Lynn 2010. Step-growth Control in Template-Directed Polymerization, Heterocycles, 82: DOI: 10.3987/COM-10-S(E)99. Vilariño-Güell C, Wider C, Ross OA, Jasinska-Myga B, Kachergus J, Cobb SA, Soto-Ortolaza AI, Behrouz B, Heckman MG, Diehl NN, Testa CM, Wszolek ZK, Uitti RJ, Jankovic J, Louis ED, Clark LN, Rajput A, Farrer MJ.  LINGO1 and LINGO2 variants are associated with essential tremor and Parkinson disease. Neurogenetics  2010; 11: 401-408.  PMID: 20369371.
 
 Xu P, Duong DM, Seyfried NT, Cheng D, Xie Y, Robert J, Rush J, Hochstrasser M, Finley D, and Peng J (2009) Quantitative proteomics reveals the function of unconventional ubiquitin chains in proteasomal degradation. Cell 137:133-145. NIHMSID97944
 
 Yang Q, Mao Z.   Regulation of MEF2s by chaperone-mediated autophagy.  Cell Cycle 2009; 8:1304.  PMID: 19342885.
-
-
-
-
-
-
-
-
-
-
-
-
