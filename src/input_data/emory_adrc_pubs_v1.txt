@@ -8,7 +8,7 @@ Bliwise DL, Greenaway MC. Will APPLES hit a ceiling? Sleep. 2011;34(3):249-250. 
 
 Bogaert E, Goris A, Van Damme P, Geelen V, Lemmens R, van Es MA, van den Berg LH, Sleegers K, Verpoorten N, Timmerman V, De Jonghe P, Van Broeckhoven C, Traynor BJ, Landers JE, Brown RH Jr, Glass JD, Al-Chalabi A, Shaw CE, Birve A, Andersen PM, Slowik A, Tomik B, Melki J, Robberecht W, Van Den Bosch L.  Polymorphisms in the GluR2 gene are not associated with amyotrophic lateral sclerosis.  Neurobiol Aging 2012;33:418-420. PMID: 20409611. PMCID: PMC2949683 
 
-Boname JM, Thomas M, Stagg HR, Xu P, Peng J, Lehner PJ.  Efficient internalization of MHC I requires lysine-11 and lysine-63 mixed linkaqe polyubiquitin chains. Traffic 2010 Feb;11(2):210-220. Epub 2009 Nov 17. NIHMS: 159904
+Boname JM, Thomas M, Stagg HR, Xu P, Peng J, Lehner PJ.  Efficient internalization of MHC I requires lysine-11 and lysine-63 mixed linkaqe polyubiquitin chains. Traffic 2010 Feb;11(2):210-220. Epub 2009 Nov 17. NIHMS: 159904. PMID: 19948006
 
 Brotherton TE, Li Y, Cooper D, Gearing M, Julien JP, Rothstein JD, Boylan K, Glass JD. Localization of a toxic form of superoxide dismutase 1 protein to pathologically affected tissues in familial ALS. Proc Natl Acad Sci USA 2012 Apr 3;109(14):5505-10. doi: 10.1073/pnas.1115009109. Epub 2012 Mar 19. PMID: 22431618.  PMCID: PMC3325721
 
@@ -38,10 +38,10 @@ Donovan LE, Higginbotham L, Dammer EB, Gearing M, Rees HD, Xia Q, Duong DM, Seyf
 
 Fleisher AS, Truran D, Mai JT, Langbaum JB, Aisen PS, Cummings JL, Jack CR Jr, Weiner MW, Thomas RG, Schneider LS, Tariot PN; Alzheimer's Disease Cooperative Study. Chronic divalproex sodium use and brain atrophy in Alzheimer disease. Neurology 2011;27;77(13):1263-1271. PMID: 21917762. PMCID: PMC3179645
 
-Gandy S, Simon AJ, Steele JW, Lublin AL, Lah JJ, Walker LC, Levey AI, Krafft GA, Levy E, Checier F, Glabe C, Bilker WB, Abel T, Schmeidler J, Ehrlich ME. Days to criterion as an indicator of toxicity associated with human Alzheimer amyloid-beta oligomers. Ann Neural 2010 Aug;68(2):220-230. DOI: 10.1002/ana.22052
+Gandy S, Simon AJ, Steele JW, Lublin AL, Lah JJ, Walker LC, Levey AI, Krafft GA, Levy E, Checier F, Glabe C, Bilker WB, Abel T, Schmeidler J, Ehrlich ME. Days to criterion as an indicator of toxicity associated with human Alzheimer amyloid-beta oligomers. Ann Neural 2010 Aug;68(2):220-230. DOI: 10.1002/ana.22052. PMID: 20641005
 
 
-Franco M, Seyfried NT, Brand AH, Peng J, Mayor U. A novel strategy to isolate ubiquitin conjugates reveals wide role of ubiquitination during neural development. Mol Cell Proteomics 2010 Sept 22 [Epub ahead of print]
+Franco M, Seyfried NT, Brand AH, Peng J, Mayor U. A novel strategy to isolate ubiquitin conjugates reveals wide role of ubiquitination during neural development. Mol Cell Proteomics 2010 Sept 22 [Epub ahead of print]. PMID: 20861518
 
 Goldstein FC, Ashley AV, Miller E, Alexeeva O, Zanders L, King V. Validity of the Montreal Cognitive Assessment as a screen for mild cognitive impairment and dementia in African Americans. J Geriatr Psychiatr Neurol 2014 Mar 10. [Epub ahead of print]. PMID: 24614202
 
@@ -111,7 +111,7 @@ Jonsson T, Stefansson H, Steinberg S, Jonsdottir I, Jonsson PV, Snaedal J, Bjorn
 
 Jucker M, Walker LC. Pathogenic protein seeding in Alzheimer disease and other neurodegenerative disorders. Ann Neurol 2011 Oct;70(4):532-540. PMID: 22028219. PMCID: PMC3203752
 
-Jun G, Naj AC, Beecham GW, Wang LS, Buros J, Gallins PJ, Buxbaum JD, Ertekin-Taner N, Fallin MD, Friedland R, Inzelberg R, Kramer P, Rogaeva E, St George-Hyslop P; Alzheimer's Disease Genetics Consortium, Cantwell LB, Dombroski BA, Saykin AJ, Reiman EM, Bennett DA, Morris JC, Lunetta KL, Martin ER, Montine T J, Goate AM, Blacker D, Tsuang DW, Beekly D, Cupples LA, Hakonarson H, Kukull W, Foroud TM, Haines J, Mayeux R, Farrer LA, Pericak-Vance MA, Schellenberg GD. Meta-analysis confirms CR1, CLU, and PICALM as Alzheimer disease risk loci and reveals interactions with APOE genotypes. Arch Neural 2010 Dec; 67(12):1473-1484. Epub 2010 Aug 9. NIHMS: 5232067
+Jun G, Naj AC, Beecham GW, Wang LS, Buros J, Gallins PJ, Buxbaum JD, Ertekin-Taner N, Fallin MD, Friedland R, Inzelberg R, Kramer P, Rogaeva E, St George-Hyslop P; Alzheimer's Disease Genetics Consortium, Cantwell LB, Dombroski BA, Saykin AJ, Reiman EM, Bennett DA, Morris JC, Lunetta KL, Martin ER, Montine T J, Goate AM, Blacker D, Tsuang DW, Beekly D, Cupples LA, Hakonarson H, Kukull W, Foroud TM, Haines J, Mayeux R, Farrer LA, Pericak-Vance MA, Schellenberg GD. Meta-analysis confirms CR1, CLU, and PICALM as Alzheimer disease risk loci and reveals interactions with APOE genotypes. Arch Neural 2010 Dec; 67(12):1473-1484. Epub 2010 Aug 9. NIHMS: 5232067. PMID: 20697030
 
 Jutras MJ, Buffalo EA. Synchronous neural activity and memory formation. Curr Opin Neurobiol 2010 Apr; 20(2):150-155. Epub 2010 Mar 18. PMCID: PMC2862842
 
@@ -311,9 +311,9 @@ Gaugler, J. E., Mittelman, M. S., Hepburn, K., & Newcomer, R.  (2009). Predict
 
 Gaugler, J. E., Mittelman, M. S., Hepburn, K., & Newcomer, R.  (2009).  Predictors of caregiver adaptation across the nursing home transition.  Psychology and Aging, 24, 385-396.
 
-Gillian Hue, Jessica Sales, Dawn Comeau, David G. Lynn and Arri Eisen, 2010, The American Science Pipeline: sustaining innovation in a time of economic crisis, Chemical Biology Education, 9: 431–434.
-Gillis MM, Quinn KM, Phillips PA, Hampstead BM.  Impaired retention is responsible for temporal order memory deficits in mild cognitive impairment.  Acta Psychologic.  2013  143(1):88-95.
-Gillian Hue, Jessica Sales, Dawn Comeau, David G. Lynn and Arri Eisen, 2010, The American Science Pipeline: sustaining innovation in a time of economic crisis, Chemical Biology Education, 9: 431–434.
+Gillian Hue, Jessica Sales, Dawn Comeau, David G. Lynn and Arri Eisen, 2010, The American Science Pipeline: sustaining innovation in a time of economic crisis, Chemical Biology Education, 9: 431–434. PMID: 21123689
+
+Gillis MM, Quinn KM, Phillips PA, Hampstead BM.  Impaired retention is responsible for temporal order memory deficits in mild cognitive impairment.  Acta Psychologic.  2013  143(1):88-95. PMID: 23542809
 
 Ginsberg SD, Mufson EJ, Counts SE, Wuu J, Alldred MJ, Nixon RA, Che S.  Regional selectivity of rab5 and rab7 protein upregulation in mild cognitive impairment and Alzheimer’s disease. J Alzheimers Dis 2010;22:631-639. PMID: 20847427.
 
@@ -325,18 +325,18 @@ Horowitz MP, Greenamyre JT.  Mitochondrial iron metabolism and its role in neuro
 
 Hwang H, Zhang J, Chung KA, Leverenz JB, Zabetian CP, Peskind ER, Jankovic J, Su Z, Hancock AM, Pan C, Montine TJ, Pan S, Nutt J, Albin R, Gearing M, Beyer RP, Shi M, Zhang J.  Glycoproteomics in neurodegenerative diseases.  Mass Spec Rev 2010;29:79-125.  PMCID: PMC2799547
 
-Jacobson AD, Zhang NY, Xu P, Han KJ, Noone S, Peng J, and Liu CW (2009) The lysine 48 and lysine 63 ubiquitin conjugates are processed differently by the 26S proteasome. J. Biol Chem. 284:35485-94. PMC2790978
+Jacobson AD, Zhang NY, Xu P, Han KJ, Noone S, Peng J, and Liu CW (2009) The lysine 48 and lysine 63 ubiquitin conjugates are processed differently by the 26S proteasome. J. Biol Chem. 284:35485-94. PMC2790978. PMID: 19858201
 
-Jun G, Naj AC, Beecham GW, Wang L-S, Buros J, Gallins PJ, Buxbaum JD, Ertekin-Taner N, Fallin MD, Friedland R, Inzelberg R, Kramer P, Rogaeva E, St. George-Hyslop P, Alzheimer’s Disease Genetics Consortium, Cantwell L, Dombroski BA, Saykin AJ, Reiman EM, Bennett DA, Morris JC, Lunetta KL, Martin ER, Montine TJ, Goate AM, Blacker D, Tsuang DW, Beekly D, Cupples LA, Hakonarson H, Kukull W, Foroud TM, Haines J, Mayeux R, Farrer LA, Pericak-Vance MA, Schellenberg GD.  Meta-analysis confirms CR1, CLU, and PICALM as Alzheimer’s disease risk loci and reveals interactions with APOE genotypes.  Arch Neurol 2010, in press (published online August 9, 2010).
+Jun G, Naj AC, Beecham GW, Wang L-S, Buros J, Gallins PJ, Buxbaum JD, Ertekin-Taner N, Fallin MD, Friedland R, Inzelberg R, Kramer P, Rogaeva E, St. George-Hyslop P, Alzheimer’s Disease Genetics Consortium, Cantwell L, Dombroski BA, Saykin AJ, Reiman EM, Bennett DA, Morris JC, Lunetta KL, Martin ER, Montine TJ, Goate AM, Blacker D, Tsuang DW, Beekly D, Cupples LA, Hakonarson H, Kukull W, Foroud TM, Haines J, Mayeux R, Farrer LA, Pericak-Vance MA, Schellenberg GD.  Meta-analysis confirms CR1, CLU, and PICALM as Alzheimer’s disease risk loci and reveals interactions with APOE genotypes.  Arch Neurol 2010, in press (published online August 9, 2010). PMID: 20697030
 
 Lane RF, Raines SM, Steele JW, Ehrlich ME, Lah JA, Small SA, Tanzi RE, Attie AD, Gandy S. Diabetes-associated SorCS1 regulates Alzheimer's amyloid-beta metabolism: evidence for involvement of SorL1 and the retromer complex. J Neurosci 30:13110-5 (2010) PMID: 20881129
 
 Lewis, ML, Hobday, JV, Hepburn, K (2010). Internet-Based Program for Dementia Caregivers.
 Am. J. Alzheimer’s disease & Other Dementias 25(8) 674-679. 
 
-Liang, Y.; Lynn, D.G. Berland, KM (2010). Direct Observation of Nucleation and Growth in Amyloid Self-Assembly, J. Am. Chem. Soc.; 132(18) 6306-6308 DOI: 10.1021/ja910964c.
+Liang, Y.; Lynn, D.G. Berland, KM (2010). Direct Observation of Nucleation and Growth in Amyloid Self-Assembly, J. Am. Chem. Soc.; 132(18) 6306-6308 DOI: 10.1021/ja910964c. PMID: 20397724
 
-Liu Z, Oh SM, Okada M, Liu X, Cheng D, Peng J, Brat DJ, Sun SY, Zhou W, Gu W, Ye K (2009) Human BRE1 is an E3 ubiquitin ligase for Ebp1 tumor suppressor. Mol Biol Cell 20:757-68. PMC2633391
+Liu Z, Oh SM, Okada M, Liu X, Cheng D, Peng J, Brat DJ, Sun SY, Zhou W, Gu W, Ye K (2009) Human BRE1 is an E3 ubiquitin ligase for Ebp1 tumor suppressor. Mol Biol Cell 20:757-68. PMC2633391. PMID: 19037095
 
 
 Mastroberardino PG, Hoffman EK, Horowitz MP, Betarbet R, Taylor G, Cheng D, Na HM, Gutekunst C-A, Gearing M, Trojanowski JQ, Anderson M, Chu CT, Peng J, Greenamyre JT.  A novel transferrin/TfR2-mediated mitochondrial iron transport system is disrupted in Parkinson’s disease.  Neurobiol Dis 2009;34:417-431.  PMCID: PMC2784936
@@ -345,7 +345,7 @@ McMillan PJ, White SS, Franklin A, Greenup JL, Leverenz JB, Raskind MA, Szot P. 
 
 Mount DL, Ashley AV, Lah JJ, Levey AI, Goldstein FC. Is APOE ε4 associated with cognitive functioning in African Americans diagnosed with Alzheimer’s disease?  An exploratory study. SMJ 102:890-3 (2009) PMID: 19668025
 
-Naj AC, Jun G, Beecham GW, Wang L-S, Vardarajan BN, Buros J, Gallins PJ, Buxbaum JD, Jarvik GP, Crane PK, Larson EB, Bird TD, Boeve BF, Graff-Radford NR, De Jager PL, Evans E, Schneider JA, Carrasquillo MM, Ertekin-Taner N, Younkin SG, Cruchaga C, Kauwe JSK, Nowotny P, Kramer P, Hardy J, Huentelman MJ, Myers AJ, Barmada MM, Demirci FY, Baldwin CT, Green RC, Rogaeva E, St. George-Hyslop P, Alzheimer’s Disease Genetics Consortium, Cantwell L, Dombroski BA, Beekly D, Lunetta KL, Martin ER, Kamboh MI, Saykin AJ, Reiman EM, Bennett DA, Morris JC, Montine TJ, Goate AM, Blacker D, Tsuang DW, Hakonarson H, Kukull WA, Foroud TM, Haines JL, Mayeux R, Pericak-Vance MA, Farrer LA, Schellenberg GD.  Common variants in MS4A4/MS4A6E, CD2AP, CD33 and EPHA1 are associated with late-onset Alzheimer's disease.  Nature Genet 2011, in press.
+Naj AC, Jun G, Beecham GW, Wang L-S, Vardarajan BN, Buros J, Gallins PJ, Buxbaum JD, Jarvik GP, Crane PK, Larson EB, Bird TD, Boeve BF, Graff-Radford NR, De Jager PL, Evans E, Schneider JA, Carrasquillo MM, Ertekin-Taner N, Younkin SG, Cruchaga C, Kauwe JSK, Nowotny P, Kramer P, Hardy J, Huentelman MJ, Myers AJ, Barmada MM, Demirci FY, Baldwin CT, Green RC, Rogaeva E, St. George-Hyslop P, Alzheimer’s Disease Genetics Consortium, Cantwell L, Dombroski BA, Beekly D, Lunetta KL, Martin ER, Kamboh MI, Saykin AJ, Reiman EM, Bennett DA, Morris JC, Montine TJ, Goate AM, Blacker D, Tsuang DW, Hakonarson H, Kukull WA, Foroud TM, Haines JL, Mayeux R, Pericak-Vance MA, Farrer LA, Schellenberg GD.  Common variants in MS4A4/MS4A6E, CD2AP, CD33 and EPHA1 are associated with late-onset Alzheimer's disease.  Nature Genet 2011, in press. PMID: 21460841
 
 Perez SE, Berg BM, Moore KA, He B, Counts SE, Fritz JJ, Hu YS, Lazarov O, Lah JJ, Mufson EJ. DHA diet reduces AD pathology in young APPswe/PS1ΔE9 transgenic mice: Possible gender effects. J Neurosci Res 88:1026-40 (2010) PMID: 19859965
 
@@ -353,7 +353,7 @@ Prior M, Shi Q, Hu X, He W, Levey A, Yan R.  RTN/Nogo in forming Alzheimer's neu
 
 Ridge PG, Mukherjee S, Crane P, Kauwe JSK, Alzheimer’s Disease Genetics Consortium.  Alzheimer’s disease:  Analyzing the missing heritability.  PLoS One 2013, in press.  PMCID: PMC3820606
 
-Rosen RF, Ciliax BJ, Wingo TS, Gearing M, Dooyema J, Wingo T, Lah JJ, Ghiso JA, LeVine H, III, Walker LC.  Deficient high-affinity binding of Pittsburgh Compound B in a case of Alzheimer's disease.  Acta Neuropathol 2010; 119:221-233.
+Rosen RF, Ciliax BJ, Wingo TS, Gearing M, Dooyema J, Wingo T, Lah JJ, Ghiso JA, LeVine H, III, Walker LC.  Deficient high-affinity binding of Pittsburgh Compound B in a case of Alzheimer's disease.  Acta Neuropathol 2010; 119:221-233. PMID: 19690877
 
 Shirey JK, Brady AE, Jones PJ, Davis AA, Bridges TM, Kennedy JP, Jadhav SB, Menon UN, Xiang Z, Watson ML, Christian EP, Doherty JJ, Quirk MC, Snyder DH, Lah JJ, Levey AI, Nicolle MM, Lindsley CW, Conn PJ. A selective allosteric potentiator of the M1 muscarinic acetylcholine receptor increases activity of medial prefrontal cortical neurons and restores impairments in reversal learning. J Neurosci 29:14271-86 (2009) PMID: 19906975, PMC2811323
 Stefansson H, Steinberg S, Petursson H, Gustafsson O, Gudjonsdottir IH, Jonsdottir GA, Palsson ST, Jonsson T, Saemundsdottir J, Bjornsdottir G, Böttcher Y, Thorlacius T, Haubenberger D, Zimprich A, Auff E, Hotzy C, Testa CM, Miyatake LA, Rosen AR, Kristleifsson K, Rye D, Asmus F, Schöls L, Dichgans M, Jakobsson F, Benedikz J, Thorsteinsdottir U, Gulcher J, Kong A, Stefansson K.  Variant in the sequence of the LINGO1 gene confers risk of essential tremor. Nat Genet 2009;41: 277-279.  PMID: 19182806.
@@ -369,7 +369,7 @@ Wang L, Goldstein FC, Veledar E, Levey AI, Lah JJ, Meltzer CC, Holder CA, Mao H.
 
 Xiaoyu Li, Andres F. Hernandez, Martha A. Grover, Nicholas V. Hud, and David G. Lynn 2010. Step-growth Control in Template-Directed Polymerization, Heterocycles, 82: DOI: 10.3987/COM-10-S(E)99. Vilariño-Güell C, Wider C, Ross OA, Jasinska-Myga B, Kachergus J, Cobb SA, Soto-Ortolaza AI, Behrouz B, Heckman MG, Diehl NN, Testa CM, Wszolek ZK, Uitti RJ, Jankovic J, Louis ED, Clark LN, Rajput A, Farrer MJ.  LINGO1 and LINGO2 variants are associated with essential tremor and Parkinson disease. Neurogenetics  2010; 11: 401-408.  PMID: 20369371.
 
-Xu P, Duong DM, Seyfried NT, Cheng D, Xie Y, Robert J, Rush J, Hochstrasser M, Finley D, and Peng J (2009) Quantitative proteomics reveals the function of unconventional ubiquitin chains in proteasomal degradation. Cell 137:133-145. NIHMSID97944
+Xu P, Duong DM, Seyfried NT, Cheng D, Xie Y, Robert J, Rush J, Hochstrasser M, Finley D, and Peng J (2009) Quantitative proteomics reveals the function of unconventional ubiquitin chains in proteasomal degradation. Cell 137:133-145. NIHMSID97944. PMID: 19345192
 
 Yang Q, Mao Z. Regulation of MEF2s by chaperone-mediated autophagy. Cell Cycle 2009;8:1304. PMID: 19342885.
 
