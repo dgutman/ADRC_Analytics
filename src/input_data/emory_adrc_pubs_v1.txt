@@ -286,7 +286,6 @@ Childers WS, Mehta AK, Lu K, Lynn DG.  Templating Molecular Arrays in Amyloid’
 
 Childers WS, Mehta AK, Ni R, Taylor JV, Lynn DG. Peptides Organized as Bilayer Membranes. Angewandte Chimie Intl 2010. Ed. http://dx.doi.org/10.1002/anie.201000212 and in Angew. Chimie 2010 Jun 1;49(24):4104-4107. PMID: 20425875
 
-
 Cruchaga C, Kauwe JSK, Harari O, Jin SC, Cai Y, Karch CM, Benitez B, Jeng AT, Skorupa T, Carrell D, Bertelsen S, Bailey M, McKean D, Shulman JM, De Jager PL, Chibnik L, Bennett DA, Arnold SE, Harold D, Sims R, Gerrish A, Williams J, Van Deerlin VM, Lee V M-Y, Shaw LM, Trojanowski JQ, Haines JL, Mayeux R, Pericak-Vance MA, Farrer LA, Schellenberg GD, Peskind ER, Galasko D, Fagan AM, Holtzman DM, Morris JC, the GERAD Consortium, Alzheimer’s Disease Neuroimaging Initiative (ADNI), the Alzheimer Disease Genetic Consortium (ADGC), Goate AM.  Use of CSF tau and phospho-tau levels as endophenotypes for Alzheimer’s disease identifies novel candidate variants for disease risk, tangle pathology and global cognitive decline.  Neuron 2013;78(2):256-268. PMCID: PMC3664945 
 
 Davis AA, Fritz JJ, Wess J, Lah JJ, Levey AI. Deletion of M1 muscarinic acetylcholine receptors increases amyloid pathology in vitro and in vivo. J Neurosci 2010;30:4190-4196. PMID: 20335454. PMCID: PMC2855655
@@ -304,7 +303,7 @@ Zabetian CP, Payami H. (2011) Disease-related and genetic correlates of psychoti
 
 Fogh I, Ratti A, Gellera C, Lin K, Tiloca C, Moskvina V, Corrado L, Sorarù G, Cereda C, Corti S, Gentilini D, Calini D, Castellotti B, Mazzini L, Querin G, Gagliardi S, Del Bo R, Conforti FL, Siciliano G, Inghilleri M, Saccà F, Bongioanni P, Penco S, Corbo M, Sorbi S, Filosto M, Ferlini A, Di Blasio AM, Signorini S, Shatunov A, Jones A, Shaw PJ, Morrison KE, Farmer AE, Van Damme P, Robberecht W, Chiò A, Traynor BJ, Sendtner M, Melki J, Meininger V, Hardiman O, Andersen PM, Leigh NP, Glass JD, Overste D, Diekstra FP, Veldink JH, van Es MA, Shaw CE, Weale ME, Lewis CM, Williams J, Brown RH, Landers JE, Ticozzi N, Ceroni M, Pegoraro E, Comi GP, D'Alfonso S, van den Berg LH, Taroni F, Al-Chalabi A, Powell J, Silani V; the SLAGEN Consortium Collaborators.  A genome-wide association meta-analysis identifies a novel locus at 17q11.2 associated with sporadic amyotrophic lateral sclerosis.  Hum Mol Genet 2013, in press. [Epub ahead of print]  PMID 24256812 [PubMed in process]
 
-Gallagher MD, Suh E, Grossman M, Elman L, McCluskey L, Van Swieten JC, Al-Sarraj S, Neumann M, Gelpi E, Ghetti B, Rohrer JD, Halliday G, Van Broeckhoven C, Seilhean D, Shaw PJ, Frosch MP, International Collaboration for Frontotemporal Dementia, Trojanowski JQ, Lee VMY, Van Deerlin V, Chen-Plotkin AS.  TMEM106B is a genetic modifier of frontotemporal lobar degeneration with C9orf72 hexanucleotide repeat expansions.  Acta Neuropathologica 2013, in press.  
+Gallagher MD, Suh E, Grossman M, Elman L, McCluskey L, Van Swieten JC, Al-Sarraj S, Neumann M, Gelpi E, Ghetti B, Rohrer JD, Halliday G, Van Broeckhoven C, Seilhean D, Shaw PJ, Frosch MP, International Collaboration for Frontotemporal Dementia, Trojanowski JQ, Lee VMY, Van Deerlin V, Chen-Plotkin AS.  TMEM106B is a genetic modifier of frontotemporal lobar degeneration with C9orf72 hexanucleotide repeat expansions.  Acta Neuropathologica 2013, in press. PMID: 24442578
 Gaugler, J. E., Mittelman, M. S., Hepburn, K., & Newcomer, R.  (2010). Clinically significant changes in burden and depression among dementia caregivers following nursing home admission.  BMC Medicine 2010, 8: 85  PMID:  21167022  PMC3012012
  
 Gaugler, J. E., Mittelman, M. S., Hepburn, K., & Newcomer, R.  (2009). Predictors of caregiver adaptation across the nursing home transition.  Psychology and Aging, 24, 385-396.  PMID:  19485656  PMC2699253
@@ -331,13 +330,11 @@ Jun G, Naj AC, Beecham GW, Wang L-S, Buros J, Gallins PJ, Buxbaum JD, Ertekin-Ta
 
 Lane RF, Raines SM, Steele JW, Ehrlich ME, Lah JA, Small SA, Tanzi RE, Attie AD, Gandy S. Diabetes-associated SorCS1 regulates Alzheimer's amyloid-beta metabolism: evidence for involvement of SorL1 and the retromer complex. J Neurosci 30:13110-5 (2010) PMID: 20881129
 
-Lewis, ML, Hobday, JV, Hepburn, K (2010). Internet-Based Program for Dementia Caregivers.
-Am. J. Alzheimer’s disease & Other Dementias 25(8) 674-679. 
+Lewis, ML, Hobday, JV, Hepburn, K (2010). Internet-Based Program for Dementia Caregivers. Am. J. Alzheimer’s disease & Other Dementias 25(8) 674-679. PMID: 21131674 
 
 Liang, Y.; Lynn, D.G. Berland, KM (2010). Direct Observation of Nucleation and Growth in Amyloid Self-Assembly, J. Am. Chem. Soc.; 132(18) 6306-6308 DOI: 10.1021/ja910964c. PMID: 20397724
 
 Liu Z, Oh SM, Okada M, Liu X, Cheng D, Peng J, Brat DJ, Sun SY, Zhou W, Gu W, Ye K (2009) Human BRE1 is an E3 ubiquitin ligase for Ebp1 tumor suppressor. Mol Biol Cell 20:757-68. PMC2633391. PMID: 19037095
-
 
 Mastroberardino PG, Hoffman EK, Horowitz MP, Betarbet R, Taylor G, Cheng D, Na HM, Gutekunst C-A, Gearing M, Trojanowski JQ, Anderson M, Chu CT, Peng J, Greenamyre JT.  A novel transferrin/TfR2-mediated mitochondrial iron transport system is disrupted in Parkinson’s disease.  Neurobiol Dis 2009;34:417-431.  PMCID: PMC2784936
 
