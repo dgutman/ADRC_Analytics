@@ -1,16 +1,19 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
 # This will read a list of ADRC publications and try and do some basic network stats on them... I am using a list of publications provided by Janet as a starting point
-import re,sys
+import re,sys,os
 from Bio import Entrez
 from Bio.Entrez import efetch, read
-
+import pickle ## Will store Author data object
 # I am interested in getting the following attributes:
 # AUTHOR LIST
 # AUTHOR LOCATION
 # Author University
 
 global_author_list = {}   ### I am using this list of authors to then build a connectivity matrix--- but first I need to see who's represented
+
+
+global_paper_by_author_list = []
 
 ### the input file in this case is a text document with PMID or PMCID's
 ### I wrote a very basic REGEX to pull out the necessary PMID's so I can pull them from PubMed
@@ -51,6 +54,8 @@ def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
     verbose_output = False
 #    output_errors= False
 
+    cur_paper_author_list = []
+
     try:
         date_completed = format_ddate( xml_data['MedlineCitation']['DateCompleted'] )
     except:
@@ -80,6 +85,7 @@ def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
 	    if 'LastName' in author:
         	author_key =    author['LastName'] + ','+  author['Initials'] 
             #print author['LastName'],author['Initials'],author,'MOO'
+		cur_paper_author_list.append(author_key)
 	        if author_key in global_author_list:
           	    global_author_list[ author_key ] +=1
                 #print "adding author"
@@ -97,6 +103,8 @@ def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
 	if output_errors: fp_error.write('Article NOT AVAILABLE\n'+str(xml_data)+'\n\n')    
 
 
+    global_paper_by_author_list.append(cur_paper_author_list)
+
     try:
 
         abstract = article['Abstract']['AbstractText'][0]
@@ -107,8 +115,8 @@ def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
         print xml_data
 	return xml_data		
 
-        #print "Unexpected error:", sys.exc_info()[0]
-	#fp_error.write(str(xml_data)+'\n')    
+#print "Unexpected error:", sys.exc_info()[0]
+#fp_error.write(str(xml_data)+'\n')    
 
 ### Gets Med Line Citation 
 #MeshHeadings = medline_citation['MeshHeadingList']
@@ -136,27 +144,6 @@ def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
         #,elmt[k1]
 
 
-#     [u'MedlineCitation', u'PubmedData']
-#     DateCompleted
-#     OtherID
-#     DateRevised
-#     MeshHeadingList
-#     OtherAbstract
-#     CommentsCorrectionsList
-#     CitationSubset
-#     ChemicalList
-#     KeywordList
-#     DateCreated
-#     SpaceFlightMission
-#     GeneralNote
-#     Article
-#     PMID
-#     MedlineJournalInfo
-#     ArticleIdList
-#     PublicationStatus
-#     History
-# 
-
 #broken_pmid = '22926189'
 #handle = efetch(db='pubmed', id=broken_pmid, retmode='xml')
 #xml_data = read(handle)[0]
@@ -173,6 +160,15 @@ if __name__ == "__main__":
 
     fp_error = open('input_data/parsing_issues.txt','w')
     pub_list = [ pub.strip('\n') for  pub in adrc_raw_paper_list if len(pub)>1 ]   ## turns it into a list and removes the blank spaces
+
+    pickle_results = True
+
+    pickle_filename = 'adrc.p'
+
+    if os.path.isfile(pickle_filename):
+	author_list = pickle.load( open(pickle_filename, "rb") )
+    else:
+	author_list = {}
 
 #  Scan through file line by line looking for PMID or PMCID--- each reference is only on a single line
     for pub in pub_list:
@@ -203,8 +199,12 @@ if __name__ == "__main__":
         
     print not_matched,"entries did not have a PMC or PMID"
 
-
     for pmid in PMID_LIST:
        print pmid
        get_metadata_from_PMID(pmid)
+
+    if pickle_results:
+#	pickle.dump( global_author_list, open( pickle_filename, "wb" ) )
+	pickle.dump( global_paper_by_author_list, open( pickle_filename, "wb" ) )
+    print global_paper_by_author_list
 
