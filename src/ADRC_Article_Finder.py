@@ -10,10 +10,8 @@ import pickle ## Will store Author data object
 # AUTHOR LOCATION
 # Author University
 
-global_author_list = {}   ### I am using this list of authors to then build a connectivity matrix--- but first I need to see who's represented
-
-
-global_paper_by_author_list = []
+### I am using this list of authors to then build a connectivity matrix--- but first I need to see who's represented
+## The current version returns a hash (with PMID as the key)
 
 ### the input file in this case is a text document with PMID or PMCID's
 ### I wrote a very basic REGEX to pull out the necessary PMID's so I can pull them from PubMed
@@ -35,7 +33,6 @@ PMID_LIST = []
 PMCID_LIST = []
 not_matched = 0
 
-
 def format_ddate(ddate):
     """Turn a date dictionary into an ISO-type string (YYYY-MM-DD)."""
     year = ddate['Year']
@@ -52,7 +49,7 @@ def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
     handle = efetch(db='pubmed', id=pmid, retmode='xml')
     xml_data = read(handle)[0]
     verbose_output = False
-#    output_errors= False
+#   output_errors= False
 
     cur_paper_author_list = []
 
@@ -102,11 +99,7 @@ def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
 #        print "Unexpected error:", sys.exc_info()[0]
 	if output_errors: fp_error.write('Article NOT AVAILABLE\n'+str(xml_data)+'\n\n')    
 
-
-    global_paper_by_author_list.append(cur_paper_author_list)
-
     try:
-
         abstract = article['Abstract']['AbstractText'][0]
     except:
         print "Unable to get abstract for",pmid
@@ -114,61 +107,30 @@ def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
     if dump_xml:
         print xml_data
 	return xml_data		
-
-#print "Unexpected error:", sys.exc_info()[0]
-#fp_error.write(str(xml_data)+'\n')    
-
-### Gets Med Line Citation 
-#MeshHeadings = medline_citation['MeshHeadingList']
-#PMID = medline_citation['PMID']
-#ArticleInfo = medline_citation['Article']
-#for k in medline_citation:
-#    print "------",k,"-------"
-#    print medline_citation[k]
-## DAteCompleted
-#MeshHeadingList,OtherID, PMID,KeywordList
-
-
-#mesh_list = [x for x in MeshHeadings[0]['QualifierName'] ]
-#print ArticleInfo.keys()
-#for k in ArticleInfo.keys():
-#    print "-----",k,"------------"
-#    print ArticleInfo[k]
-    
-
-## each returned element consists of two dictionaries-- pubmeddata and medlinecitatin..
-#for k in my_doc[0].keys():
-#    elmt = my_doc[0][k]
-#    for k1 in elmt.keys():
-#        print k1
-        #,elmt[k1]
-
-
-#broken_pmid = '22926189'
-#handle = efetch(db='pubmed', id=broken_pmid, retmode='xml')
-#xml_data = read(handle)[0]
+    else:
+	return cur_paper_author_list
 
 if __name__ == "__main__":
 
     Entrez.email = "dagutman@gmail.com"     # Always tell NCBI who you are
-    adrc_file_list = 'adrc_pubs.txt'
-
-    adrc_fp = open('input_data/emory_adrc_pubs_v1.txt','r')
-    adrc_raw_paper_list = adrc_fp.readlines()
-
-    fp_out = open('input_data/need_pmid.txt','w')
-
-    fp_error = open('input_data/parsing_issues.txt','w')
-    pub_list = [ pub.strip('\n') for  pub in adrc_raw_paper_list if len(pub)>1 ]   ## turns it into a list and removes the blank spaces
-
+    adrc_file_list = 'input_data/emory_adrc_pubs_v1.txt' ## This is a bibliography pasted as a text file
     pickle_results = True
-
     pickle_filename = 'adrc.p'
 
     if os.path.isfile(pickle_filename):
-	author_list = pickle.load( open(pickle_filename, "rb") )
+	pmid_metadata_hash = pickle.load( open(pickle_filename, "rb") )
     else:
-	author_list = {}
+	pmid_metadata_hash = {}
+
+
+    #Open and then reaed the file containing the bibliography info
+    adrc_fp = open(adrc_file_list,'r')
+    adrc_raw_paper_list = adrc_fp.readlines()
+
+    fp_out = open('input_data/need_pmid.txt','w') ## Dump files that need PMID that I coudlnt' fine
+
+    fp_error = open('input_data/parsing_issues.txt','w') # Other debug output
+    pub_list = [ pub.strip('\n') for  pub in adrc_raw_paper_list if len(pub)>1 ]   ## turns it into a list and removes the blank spaces
 
 #  Scan through file line by line looking for PMID or PMCID--- each reference is only on a single line
     for pub in pub_list:
@@ -199,12 +161,16 @@ if __name__ == "__main__":
         
     print not_matched,"entries did not have a PMC or PMID"
 
+
     for pmid in PMID_LIST:
-       print pmid
-       get_metadata_from_PMID(pmid)
+        if pmid not in pmid_metadata_hash:
+		print pmid
+       ### If the metadata is already in the pickle file... I don't need to reparse it
+        	paper_metadata = get_metadata_from_PMID(pmid)
+	        pmid_metadata_hash[pmid] = paper_metadata
+	else:
+		print "Skipping",pmid,"as we already have data for it..."
 
     if pickle_results:
-#	pickle.dump( global_author_list, open( pickle_filename, "wb" ) )
-	pickle.dump( global_paper_by_author_list, open( pickle_filename, "wb" ) )
-    print global_paper_by_author_list
+	pickle.dump( pmid_metadata_hash, open( pickle_filename, "wb" ) )
 
