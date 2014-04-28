@@ -22,11 +22,16 @@ print len(pmid_datahash),"papers included in current data set"
 js_fp= open('ADRC_metadata.json','w')
 
 
+affil_fp = open('affiliations_rawtext.csv','w')
+
+
+
+
 ## Build unique author list
 author_occurrence_hash = {}
 author_pairs = []
 for pmid in pmid_datahash:
-    author_list = pmid_datahash[pmid]
+    author_list = pmid_datahash[pmid]['auth_list']
     print author_list
 #    print [ p for p in itertools.combinations(author_list,2) ]
     
@@ -37,6 +42,17 @@ for pmid in pmid_datahash:
 		author_occurrence_hash[author] +=1
 	else:
 		author_occurrence_hash[author] = 1
+    affiliation_list = pmid_datahash[pmid]['affiliations']
+    #print affiliation_list
+    for affil in affiliation_list:
+	    print affil,"hi dave!"
+	    print type(affil)
+	    author_info_string = "pmid;%s;LastName;%s;FirstName;%s;Initials;%s;Affiliation;%s;University;;State;;City;;" % (  pmid, affil[0]['LastName'], affil[0]['ForeName'],affil[0]['Initials'],affil[1])
+	    print author_info_string
+  
+
+#    affil_fp.write('pmid:'+pmid+';'+str(affiliation_list)+'\n')
+            affil_fp.write(author_info_string.encode('utf-8')+'\n')
 
 for a in author_occurrence_hash:
 	print a,author_occurrence_hash[a]    
@@ -156,24 +172,6 @@ json.dump(json_object, js_fp)
 
 #"""The service can provide output in a number of formats, as specified by the format parameter, which can be one of "html", "xml", "json", or "csv". "xml" is the dafault, and several examples of this response format are given above. Examples of each of the other formats is shown below.
 
-#JSON
-#>>> import urllib2
-#>>> import simplejson
-#>>> req = urllib2.Request("http://vimeo.com/api/v2/video/38356.json", None, {'user-agent':'syncstream/vimeo'})
-#>>> opener = urllib2.build_opener()
-#>>> f = opener.open(req)
-#>>> f.read()   
-#f = opener.open(req)
-#simplejson.load(f)
-#http://www.pubmedcentral.nih.gov/utils/idconv/v1.0/?ids=PMC2883744&format=json
-#http://people.duke.edu/~ccc14/pcfb/biopython/BiopythonEntrez.html
-#import urllib2
-#import simplejson
-#req_url = 'http://www.pubmedcentral.nih.gov/utils/idconv/v1.0/?ids=%s&format=json'
-#req = urllib2.Request( (req_url % pmcid) )
-#opener = urllib2.build_opener()
-#f = opener.open(req)
-#mydata = simplejson.load(f)
 """>>> from collections import OrderedDict
 
 >>> # regular unsorted dictionary
@@ -192,26 +190,3 @@ OrderedDict([('pear', 1), ('orange', 2), ('banana', 3), ('apple', 4)])
 OrderedDict([('pear', 1), ('apple', 4), ('orange', 2), ('banana', 3)])
 """
 
-sample_json = {
-  "status": "ok",
-  "responseDate": "2013-09-23 14:28:14",
-  "request": "ids=PMC2883744;format=json",
-  "records": [
-    {
-      "pmcid": "PMC2883744",
-      "pmid": "20495566",
-      "doi": "10.1038/ng.590",
-      "versions": [
-        {
-          "pmcid": "PMC2883744.1",
-          "mid": "UKMS29888"
-        },
-        {
-          "pmcid": "PMC2883744.2",
-          "mid": "NIHMS198092",
-          "current": True
-        }
-      ]
-    }
-  ]
-}
