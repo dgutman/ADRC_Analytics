@@ -5,10 +5,12 @@ import re,sys,os
 from Bio import Entrez
 from Bio.Entrez import efetch, read
 import pickle ## Will store Author data object
+import urllib2
+import simplejson
+
+
 # I am interested in getting the following attributes:
-# AUTHOR LIST
-# AUTHOR LOCATION
-# Author University
+# AUTHOR LIST, AUTHOR LOCATION, Author University
 
 ### I am using this list of authors to then build a connectivity matrix--- but first I need to see who's represented
 ## The current version returns a hash (with PMID as the key)
@@ -32,6 +34,7 @@ debug = False
 PMID_LIST = []
 PMCID_LIST = []
 not_matched = 0
+author_affiliation_list = []  # This will likely have to be hand parsed
 
 def format_ddate(ddate):
     """Turn a date dictionary into an ISO-type string (YYYY-MM-DD)."""
@@ -44,13 +47,26 @@ def format_ddate(ddate):
             return None
     return "%s-%s-%s" % (year, month.zfill(2), day.zfill(2))
 
+def get_pmid_from_pmcid(pmcid):
+	req_url = 'http://www.pubmedcentral.nih.gov/utils/idconv/v1.0/?ids=%s&format=json'
+	req = urllib2.Request( ( req_url % pmcid) )
+	opener = urllib2.build_opener()
+	f= opener.open(req)
+	mydata = simplejson.load(f)
+	try:
+		pmid = mydata['records'][0]['pmid']
+		return pmid
+	except:
+		return None
+
+
 def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
     """This function will take an input PMID and parse the attributes I am interested in for the cytoscape plugin...."""
     handle = efetch(db='pubmed', id=pmid, retmode='xml')
     xml_data = read(handle)[0]
     verbose_output = False
 #   output_errors= False
-
+    author_affiliation_list = []
     cur_paper_author_list = []
 
     try:
@@ -76,39 +92,43 @@ def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
     try:
         article = xml_data['MedlineCitation']['Article']
         if verbose_output: print xml_data
-        #print date_completed,otherID
-        for author in  article['AuthorList']:
+        for author in article['AuthorList']:
             #author_key = { 'LastNAme': author['LastName'], 'Initials': author['Initials'] }
+	    #print author 
 	    if 'LastName' in author:
         	author_key =    author['LastName'] + ','+  author['Initials'] 
-            #print author['LastName'],author['Initials'],author,'MOO'
+		#print author,author_key
 		cur_paper_author_list.append(author_key)
-	        if author_key in global_author_list:
-          	    global_author_list[ author_key ] +=1
-                #print "adding author"
-	        else:
-        	    global_author_list[ author_key ] = 1
 	    elif 'CollectiveName' in author:
 		print "FOUND A COLLECTION EXAMPLE",author
-                #print "I ADDED AN AUTHOR..."
-        #return abstract
+            if 'Affiliation' in author:
+	    	author_affil = author['Affiliation']
+	    	author_affiliation_list.append( (author, author_affil) )
+	    #	print author_affil
+	    #	sys.exit()
+    except NameError as e:
+	print e
     except IndexError:
         return None
     except:
         print "unable to proces article tag",pmid
-#        print "Unexpected error:", sys.exc_info()[0]
+        print "Unexpected error parsing author string:", sys.exc_info()[0]
 	if output_errors: fp_error.write('Article NOT AVAILABLE\n'+str(xml_data)+'\n\n')    
+	print author
+	#print xml_data
 
     try:
         abstract = article['Abstract']['AbstractText'][0]
     except:
         print "Unable to get abstract for",pmid
 
+
+
     if dump_xml:
         print xml_data
 	return xml_data		
     else:
-	return cur_paper_author_list
+	return { 'auth_list': cur_paper_author_list, 'affiliations': author_affiliation_list }
 
 if __name__ == "__main__":
 
@@ -171,6 +191,20 @@ if __name__ == "__main__":
 	else:
 		print "Skipping",pmid,"as we already have data for it..."
 
+    print PMCID_LIST
+    for pmcid in PMCID_LIST:
+	pmid  = get_pmid_from_pmcid(pmcid)
+	print "FOUND IT?",pmid,pmcid
+	## Check for None condition
+        if pmid and pmid not in pmid_metadata_hash:
+		paper_metadata = get_metadata_from_PMID(pmid)
+	        pmid_metadata_hash[pmid] = paper_metadata	
+	else:
+		print "Skipping",pmid,"as we already have data for it..."
+
+
+
+    print author_affiliation_list
     if pickle_results:
 	pickle.dump( pmid_metadata_hash, open( pickle_filename, "wb" ) )
 
