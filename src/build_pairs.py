@@ -24,6 +24,8 @@ js_fp= open('ADRC_metadata.json','w')
 
 affil_fp = open('affiliations_rawtext.csv','w')
 
+cytoscape_fp = open('cytoscape_simpleformat.csv','w')
+
 
 
 
@@ -72,7 +74,7 @@ author_cooccurrence_hash = {}  ### now also need to generate the list of cooccur
 
 author_cooccurrence_hash = Counter(author_pairs)
 
-min_paper_count = 3
+min_paper_count = 5
 
 filtered_author_list = []
 filtered_author_dict = {}
@@ -128,6 +130,9 @@ for i in range (0,len(filtered_author_dict) ):
 			node_info = { 'source': i, 'target': k, 'value': author_cooccurrence_count }
 #			print node_info
 			link_list.append(node_info)
+			author_linkage_string = '"%s";%d;"%s"' % ( filtered_author_list[i][0], author_cooccurrence_count, filtered_author_list[k][0])
+			cytoscape_fp.write( author_linkage_string + '\n' )
+
 #    {"source":1,"target":0,"value":1},
 
 #pprint(link_list)
@@ -137,6 +142,8 @@ pprint( json_object)
 
 ## NOW I NEED TO GENERATE THE LINK LIST...
 json.dump(json_object, js_fp)
+
+
 
 #pprint( filtered_author_dict)
 
