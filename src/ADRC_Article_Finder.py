@@ -74,8 +74,11 @@ def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
     except:
         print "Date Completed not available??",pmid
 	## Will try date created	
-	date_completed = None
-	date_created = format_ddate( xml_data['MedlineCitation']['DateCreated'] )
+	#date_completed = None
+	#date_created = format_ddate( xml_data['MedlineCitation']['DateCreated'] )
+	## I am removing the difference between date completed and created-- it doens't really matter for my purposes
+	date_completed = format_ddate( xml_data['MedlineCitation']['DateCreated'] )
+	
 	#fp_error.write('Date Completed Not Avaiable:\n'+str(xml_data)+'\n\n')    
 
     try:
@@ -124,11 +127,12 @@ def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
 
 
 
+
     if dump_xml:
         print xml_data
 	return xml_data		
     else:
-	return { 'auth_list': cur_paper_author_list, 'affiliations': author_affiliation_list }
+	return { 'auth_list': cur_paper_author_list, 'affiliations': author_affiliation_list, 'publication_date': date_completed }
 
 if __name__ == "__main__":
 

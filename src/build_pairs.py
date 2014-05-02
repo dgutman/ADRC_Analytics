@@ -18,24 +18,25 @@ print len(pmid_datahash),"papers included in current data set"
 
 ### First need to iterate through all of the paper author lists
 
-
 js_fp= open('ADRC_metadata.json','w')
-
 
 affil_fp = open('affiliations_rawtext.csv','w')
 
 cytoscape_fp = open('cytoscape_simpleformat.csv','w')
 
 
-
-
 ## Build unique author list
 author_occurrence_hash = {}
 author_pairs = []
+
+
+
 for pmid in pmid_datahash:
     author_list = pmid_datahash[pmid]['auth_list']
+    print pmid_datahash[pmid]
+    pub_year = pmid_datahash[pmid]['publication_date'].split('-')[0]
+    
     print author_list
-#    print [ p for p in itertools.combinations(author_list,2) ]
     
     author_pairs.extend( list( itertools.combinations(author_list,2) ) )
 #    print author_pairs
@@ -47,11 +48,9 @@ for pmid in pmid_datahash:
     affiliation_list = pmid_datahash[pmid]['affiliations']
     #print affiliation_list
     for affil in affiliation_list:
-	    print affil,"hi dave!"
 	    print type(affil)
 	    author_info_string = "pmid;%s;LastName;%s;FirstName;%s;Initials;%s;Affiliation;%s;University;;State;;City;;" % (  pmid, affil[0]['LastName'], affil[0]['ForeName'],affil[0]['Initials'],affil[1])
 	    print author_info_string
-  
 
 #    affil_fp.write('pmid:'+pmid+';'+str(affiliation_list)+'\n')
             affil_fp.write(author_info_string.encode('utf-8')+'\n')
@@ -60,9 +59,7 @@ for a in author_occurrence_hash:
 	print a,author_occurrence_hash[a]    
 
 print len(author_occurrence_hash),"authors are present in this stack"
-
 print len(author_pairs)
-
 
 #print len(set(author_pairs)),"author pairs present"
 ### NEED TO REMOVE DUPLICATE AUTHOR PAIRS.. e.g.  Lah, Levey == Levey, Lah
@@ -74,7 +71,7 @@ author_cooccurrence_hash = {}  ### now also need to generate the list of cooccur
 
 author_cooccurrence_hash = Counter(author_pairs)
 
-min_paper_count = 5
+min_paper_count = 1
 
 filtered_author_list = []
 filtered_author_dict = {}
@@ -86,11 +83,9 @@ for k in reversed(sorted(author_occurrence_hash.items(), key=lambda t: t[1])):
 		print k
 		filtered_author_list.append(k)
 		filtered_author_dict[author] = author_id
-		
 		author_id +=1
 
 print len(filtered_author_list),"authors had more than",min_paper_count,"pubs"
-
 
 node_list = []
 for k in sorted(filtered_author_dict.items(), key = lambda t: t[1]):
@@ -103,10 +98,8 @@ for k in sorted(filtered_author_dict.items(), key = lambda t: t[1]):
 	(author_name, author_uid) = k
 	print author_name
 
-
 ## So now for a given author i... I want to see how many papers he/she has with author K...
 ## Need to make sure this recursion is actually correct
-
 
 link_list = []
 
