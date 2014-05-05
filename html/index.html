@@ -24,10 +24,30 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <style>
 
+.container
+	{
+	}
+
 .link {
   stroke: #000;
   stroke-width: 1.5px;
 }
+
+.param_slider
+	{
+	 background-color: white;
+	}
+
+.param_slider
+	{
+	 background-color: white;
+	 float: right;
+	 padding: 5px;
+	 margin-left: 5px;
+	 margin-right: 5px;
+	 margin-top: 5px;
+	}
+
 
 .node {
   fill: #000;
@@ -46,24 +66,55 @@
 
   <body>
 <script>
+    
+    
+var width = 1600,
+    height = 700;
 
-var width = 1260,
-    height = 800;
-
-var color = d3.scale.category10();
+var color = d3.scale.category20();
 
 var nodes = [],
     links = [];
 
+
+var graph_props = {};
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
 var force = d3.layout.force()
-    .charge(-260)
-    .linkDistance(280)
+    .charge(-50)
+    .linkDistance(50)
     .size([width, height]);
+
+
+var my_favorite_div;
+
+function updateGraph( param_update, update_value, x)
+	{
+	console.log(param_update+update_value);
+//	console.log(update_value);
+	console.log(x);
+	my_favorite_div = x;
+	//x.innerText(update_value);
+	my_favorite_div[0].innerText=update_value;
+	
+	if( param_update == "node_length")
+		{
+		force.charge(update_value);	//Update the charge value
+		force.start() ; //rerenders the graph with the new charge input
+		}
+	else if( param_update == "node_distance")
+		{
+		force.distance(update_value);	//Update the charge value
+		force.start() ; //rerenders the graph with the new charge input
+		}
+	
+
+	
+	}
+
 
 d3.json("http://node16.cci.emory.edu/ADRC/ADRC_metadata.json", function(error, graph) {
   force
@@ -81,7 +132,7 @@ d3.json("http://node16.cci.emory.edu/ADRC/ADRC_metadata.json", function(error, g
       .data(graph.nodes)
     .enter().append("circle")
       .attr("class", "node")
-      .attr("r", 20)
+      .attr("r", 10)
       .style("fill", function(d) { return color(d.group); })
       .call(force.drag);
 
@@ -105,27 +156,30 @@ d3.json("http://node16.cci.emory.edu/ADRC/ADRC_metadata.json", function(error, g
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand" href="#">ADRC Data Analytics</a>
-        </div>
-<!--        <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
--->
+    	</div>
+	<!-- Node length slider -->
+	
+	<div class="param_slider navbar" style="width:200px">node Charge(<a href=# onclick="$('#set_invert').val(0);
+                        $('#set_node_length').change();
+                        return false">reset</a>)
+            <input id=set_node_length type=range min=-250 max=-50 value=-50 onchange="updateGraph('node_length', this.value, $(this).next())"> <span>50</span>
+            <script>graph_props.node_length = -50;</script>
+	</div>
+
+
+	<div class="param_slider navbar " style="width:200px">Node Distance(<a href=# onclick="$('#set_node_distance').val(0);
+                        $('#set_node_distance').change();
+                        return false">reset</a>)
+            <input id=set_node_distance type=range min=0 max=250 value=50 onchange="updateGraph('node_distance', this.value, $(this).next())"> <span>150</	span>
+            <script>graph_props.node_distance = 50;</script>
+	</div>
+
+	
       </div>
+
+	
+
     </div>
 
 
@@ -166,7 +220,7 @@ d3.json("http://node16.cci.emory.edu/ADRC/ADRC_metadata.json", function(error, g
       </footer>
     </div> <!-- /container -->
 
-<! -- http://bl.ocks.org/benzguo/4370043 zoomable example -->
+
   </body>
 </html>
 
