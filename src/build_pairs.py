@@ -37,6 +37,9 @@ curated_author_datadict = {}
 university_index = []
 
 
+unknown_author_affiliation_dict = {}
+
+
 for line in curated_author_data:
 	cols = line.rstrip().split(';')
 	pmid = cols[1]
@@ -130,18 +133,24 @@ def generate_cooccurrence_info( author_pairs, author_occurrence_hash):
 			print curated_author_datadict[author_name]['university'],author_uid,author_name
 		else:
 			print author_name.encode('utf-8'),"not in datadict??!"
+			unknown_author_affiliation_dict[author_name] = 1
+
+			if author_name not in unknown_author_affiliation_dict:
+				unknown_author_affiliation_dict[author_name] = 1
+			else:
+				unknown_author_affiliation_dict[author_name] += 1
 
 		
 		## group_id is used for colors.. right now I only have 20 colors to choose from though..
 		try:  
 			author_university = curated_author_datadict[author_name]['university']
 			group_id = university_index.index(author_university)
-			node_list.append( { 'name':author_name, 'group': group_id % 20 } )
-
 		except:
 			group_id = 0
 #			print 'NEED;---;',curated_author_datadict[author_name]
 			#print author_name.encode('utf-8'),'NEED'
+		node_list.append( { 'name':author_name, 'group': group_id % 20 } )
+
 
 	#print node_list
 
@@ -185,6 +194,8 @@ def generate_cooccurrence_info( author_pairs, author_occurrence_hash):
 ## NOW I NEED TO GENERATE THE LINK LIST...
 	
 
+
+
 ### NOW ACTUALLY BUILD THE JSON OBJECT WHICH CONSISTS OF A LIST OF NODES AND LINKS
 
 ## FOR NOW GROUP WILL BE BASED ON THE NUMBER OF PAPERS THEY'VE WRITTEN... maybe change later to something else
@@ -216,7 +227,6 @@ def generate_cooccurrence_info( author_pairs, author_occurrence_hash):
 
 
 
-
 years_to_scan = [2012]
 
 for year in years_to_scan:
@@ -226,4 +236,25 @@ for year in years_to_scan:
 
     generate_cooccurrence_info(author_pairs, author_occurrence_hash)
 
+
+
+
+
+for author in unknown_author_affiliation_dict:
+	print author.encode('utf-8'),"has no info"
+
+
+print len(unknown_author_affiliation_dict),"authors need lookup"
+
+
+for pmid in pmid_datahash:
+	author_list = pmid_datahash[pmid]['auth_list']
+	for auth in author_list:
+		if auth in unknown_author_affiliation_dict:
+			(lastname,initial) = auth.encode('utf-8').split(',')
+			print "pmid;%s;Lastname;%s;Firstname;;Initials;%s;Affiliation;;University;;;State;;;City;;" % ( pmid, lastname, initial )
+
+
+
+#pmid;None;Lastname;Betarbet;Firstname;Ranjita;Initials;RS;Affiliation;Emory;University;Emory University;State;GA;City;Atlanta;
 
