@@ -206,8 +206,6 @@ if __name__ == "__main__":
 	else:
 		print "Skipping",pmid,"as we already have data for it..."
 
-
-
     print author_affiliation_list
     if pickle_results:
 	pickle.dump( pmid_metadata_hash, open( pickle_filename, "wb" ) )

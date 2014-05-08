@@ -189,53 +189,29 @@ def generate_cooccurrence_info( author_pairs, author_occurrence_hash):
 
 	json_object = { 'nodes':node_list, 'links': link_list}
 	#pprint( json_object)
-	json.dump(json_object, js_fp)
-
-## NOW I NEED TO GENERATE THE LINK LIST...
-	
+	#json.dump(json_object, js_fp)
+	return json_object
 
 
-
-### NOW ACTUALLY BUILD THE JSON OBJECT WHICH CONSISTS OF A LIST OF NODES AND LINKS
-
-## FOR NOW GROUP WILL BE BASED ON THE NUMBER OF PAPERS THEY'VE WRITTEN... maybe change later to something else
-
-#{
-#  "nodes":[
-##    {"name":"Myriel","group":1},
-#    {"name":"Napoleon","group":1},
-#    {"name":"Mlle.Baptistine","group":1},
-#    {"name":"Mme.Hucheloup","group":8}
-#  ],
-#"links":[
-#    {"source":1,"target":0,"value":1},
-#    {"source":2,"target":0,"value":8},
-#    {"source":3,"target":0,"value":10},
-#    {"source":3,"target":2,"value":6},
-##    {"source":7,"target":0,"value":1},
-#    {"source":76,"target":58,"value":1},
-#  ]
-#}
-#
 
 #http://nsaunders.wordpress.com/2013/09/17/web-scraping-using-mechanize-pmid-to-pmcidnihmsid/
-
 #http://www.ncbi.nlm.nih.gov/pmc/tools/id-converter-api/
-
 #"""The service can provide output in a number of formats, as specified by the format parameter, which can be one of "html", "xml", "json", or "csv". "xml" is the dafault, and several examples of this response format are given above. Examples of each of the other formats is shown below.
 
 
 
+years_to_scan = [2011,2012,2013]
 
-years_to_scan = [2012]
-
+### I am going to write a separate graph/nodelist for each year... and then output this as a JSON object
+multiyear_json_object = {}
 for year in years_to_scan:
     (author_occurrence_hash, author_pairs ) = build_author_pairs_by_year (pmid_datahash, year)
     print len(author_occurrence_hash),"authors are present in this stack",year
     print len(author_pairs),"pairs for year",year
 
-    generate_cooccurrence_info(author_pairs, author_occurrence_hash)
-
+    json_link_data = generate_cooccurrence_info(author_pairs, author_occurrence_hash)
+    multiyear_json_object[year]= json_link_data
+json.dump(multiyear_json_object, js_fp)
 
 
 
