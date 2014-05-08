@@ -110,7 +110,7 @@ def build_author_pairs_by_year ( pmid_datahash, year_to_analyze):
 def generate_cooccurrence_info( author_pairs, author_occurrence_hash):
 	author_cooccurrence_hash = Counter(author_pairs) ### now also need to generate the list of cooccurrence
 
-	min_paper_count = 1
+	min_paper_count = 2
 
 	filtered_author_list = []
 	filtered_author_dict = {}
@@ -200,7 +200,7 @@ def generate_cooccurrence_info( author_pairs, author_occurrence_hash):
 
 
 
-years_to_scan = [2011,2012,2013]
+years_to_scan = [2005,2006,2007,2008,2009,2010,2011,2012,2013]
 
 ### I am going to write a separate graph/nodelist for each year... and then output this as a JSON object
 multiyear_json_object = {}

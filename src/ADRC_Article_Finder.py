@@ -137,7 +137,9 @@ def get_metadata_from_PMID( pmid, output_errors=False, dump_xml=False ):
 if __name__ == "__main__":
 
     Entrez.email = "dagutman@gmail.com"     # Always tell NCBI who you are
-    adrc_file_list = 'input_data/emory_adrc_pubs_v1.txt' ## This is a bibliography pasted as a text file
+    #adrc_file_list = 'input_data/emory_adrc_pubs_v1.txt' ## This is a bibliography pasted as a text file
+
+    adrc_file_list = 'input_data/emory_adrc_pubs_2009.txt'
     pickle_results = True
     pickle_filename = 'adrc.p'
 
